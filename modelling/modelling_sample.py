@@ -44,7 +44,7 @@ print(classification_report(y_valid, pred_valid))
 # Actual Test Prediction
 pred_test = model.predict(x_test).astype(int)
 output = pd.DataFrame({'PassengerId': test.PassengerId, 'Survived': pred_test})
-output.to_csv('predicted_output.csv', index=False)
+output.to_csv(args.output_predictions_data_path, index=False)
 print("Your submission was successfully saved!")
 
 pickle.dump(model, open(args.output_model_path, 'wb'))
