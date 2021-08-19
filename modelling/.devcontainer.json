@@ -2,7 +2,7 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.191.1/containers/docker-from-docker-compose
 {
 	"name": "Docker from Docker Compose",
-	"dockerComposeFile": "../.devcontainer/docker-compose.yml",
+	"dockerComposeFile": "../docker/dev/docker-compose.yml",
 	"service": "modelling",
 	"workspaceFolder": "/workspace/modelling",
 	// Use this environment variable if you need to bind mount your local source code into a new container.
