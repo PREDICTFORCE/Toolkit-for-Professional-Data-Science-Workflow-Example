@@ -4,7 +4,7 @@
 	"name": "Docker from Docker Compose",
 	"dockerComposeFile": "../.devcontainer/docker-compose.yml",
 	"service": "eda",
-	"workspaceFolder": "/workspace",
+	"workspaceFolder": "/workspace/eda",
 	// Use this environment variable if you need to bind mount your local source code into a new container.
 	"remoteEnv": {
 		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
@@ -12,9 +12,10 @@
 	// Set *default* container specific settings.json values on container create.
 	"settings": {},
 	// Add the IDs of extensions you want installed when the container is created.
-	"postCreateCommand": "pip install poetry $$ poetry install --no-interaction --no-ansi",
+	"postCreateCommand": "poetry install --no-interaction --no-ansi",
 	"extensions": [
-		"ms-azuretools.vscode-docker"
+		"ms-azuretools.vscode-docker",
+		"ms-python.python"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
