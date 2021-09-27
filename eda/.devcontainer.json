@@ -2,7 +2,7 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.191.1/containers/docker-from-docker-compose
 {
 	"name": "Docker from Docker Compose",
-	"dockerComposeFile": "../.devcontainer/docker-compose.yml",
+	"dockerComposeFile": "../docker/dev/docker-compose.yml",
 	"service": "eda",
 	"workspaceFolder": "/workspace",
 	// Use this environment variable if you need to bind mount your local source code into a new container.
@@ -12,9 +12,13 @@
 	// Set *default* container specific settings.json values on container create.
 	"settings": {},
 	// Add the IDs of extensions you want installed when the container is created.
-	"postCreateCommand": "pip install poetry $$ poetry install --no-interaction --no-ansi",
+	"postCreateCommand": "poetry install --no-interaction --no-ansi",
 	"extensions": [
-		"ms-azuretools.vscode-docker"
+		"ms-azuretools.vscode-docker",
+		"ms-python.python",
+		"coenraads.bracket-pair-colorizer-2",
+		"aaron-bond.better-comments",
+		"esbenp.prettier-vscode"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],

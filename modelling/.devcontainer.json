@@ -2,9 +2,9 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.191.1/containers/docker-from-docker-compose
 {
 	"name": "Docker from Docker Compose",
-	"dockerComposeFile": "../.devcontainer/docker-compose.yml",
+	"dockerComposeFile": "../docker/dev/docker-compose.yml",
 	"service": "modelling",
-	"workspaceFolder": "/workspace/modelling",
+	"workspaceFolder": "/workspace",
 	// Use this environment variable if you need to bind mount your local source code into a new container.
 	"remoteEnv": {
 		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
@@ -15,7 +15,10 @@
 	"postCreateCommand": "poetry install --no-interaction --no-ansi",
 	"extensions": [
 		"ms-azuretools.vscode-docker",
-		"ms-python.python"
+		"ms-python.python",
+		"coenraads.bracket-pair-colorizer-2",
+		"aaron-bond.better-comments",
+		"esbenp.prettier-vscode"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
